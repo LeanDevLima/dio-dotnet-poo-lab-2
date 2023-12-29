@@ -7,33 +7,40 @@ namespace DIO.Series
         static SerieRepositorio repositorio = new SerieRepositorio();
         static void Main(string[] args)
         {
+            Console.Title = "DIO Séries";
+            Console.BackgroundColor = ConsoleColor.DarkBlue; 
+            Console.ForegroundColor = ConsoleColor.White; 
+
+
             string opcaoUsuario = ObterOpcaoUsuario();
 
-			while (opcaoUsuario.ToUpper() != "X")
-			{
-				switch (opcaoUsuario)
-				{
-					case "1":
-						ListarSeries();
-						break;
-					case "2":
-						InserirSerie();
-						break;
-					case "3":
-						AtualizarSerie();
-						break;
-					case "4":
-						ExcluirSerie();
-						break;
-					case "5":
-						VisualizarSerie();
-						break;
-					case "C":
-						Console.Clear();
-						break;
+            while (opcaoUsuario.ToUpper() != "X")
+            {
+                switch (opcaoUsuario)
+                {
+                    case "1":
+                        ListarSeries();
+                        break;
+                    case "2":
+                        InserirSerie();
+                        break;
+                    case "3":
+                        AtualizarSerie();
+                        break;
+                    case "4":
+                        ExcluirSerie();
+                        break;
+                    case "5":
+                        VisualizarSerie();
+                        break;
+                    case "C":
+                        Console.Clear();
+                        break;
 
-					default:
-						throw new ArgumentOutOfRangeException();
+                    default:
+                        Console.WriteLine("Opção inválida. Tente novamente.");
+                        break;
+
 				}
 
 				opcaoUsuario = ObterOpcaoUsuario();
@@ -92,6 +99,7 @@ namespace DIO.Series
 
 			repositorio.Atualiza(indiceSerie, atualizaSerie);
 		}
+
         private static void ListarSeries()
 		{
 			Console.WriteLine("Listar séries");
@@ -157,9 +165,12 @@ namespace DIO.Series
 			Console.WriteLine("C- Limpar Tela");
 			Console.WriteLine("X- Sair");
 			Console.WriteLine();
+            Console.Write("Escolha a opção desejada: ");
 
 			string opcaoUsuario = Console.ReadLine().ToUpper();
 			Console.WriteLine();
+
+
 			return opcaoUsuario;
 		}
     }

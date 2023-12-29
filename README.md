@@ -2,20 +2,34 @@
 
 ## Criando uma APP de cadastro em memória
 
-[Slides](dio-dotnet-poo-lab-2.pdf)
+Esse desafio é um projeto console para cadastro de séries, veio praticamente pronto, ao dar o comando 'dotnet run' foi possível ver o seguinte resultado:
 
-## Contato
+```bash
+$ dotnet run
 
-Eliézer Zarpelão
+DIO Séries a seu dispor!!!
+Informe a opção desejada:
+1- Listar séries
+2- Inserir nova série
+3- Atualizar série
+4- Excluir série
+5- Visualizar série
+C- Limpar Tela
+X- Sair
 
-Linkedin:  [br.linkedin.com/in/eliezerzarpelao](http://br.linkedin.com/in/eliezerzarpelao)
+```
 
-WebSite:  [eliezerzarpelao.eti.br](https://eliezerzarpelao.eti.br)
+Então tomei a liberdade de fazer algumas alterações:
 
-Instagram:  [instagram.com/eliezerzarpelao](https://instagram.com/eliezerzarpelao)
+- **Cores no Console:** Adicionou-se cores ao console para tornar a interface mais atraente e legível.
+- **Mensagens mais informativas:** Mensagens foram aprimoradas para fornecer informações mais claras ao usuário.
+- **Tratamento de Erros:** Adicionou-se tratamento de erros para a entrada do usuário, evitando exceções não tratadas.
+- **Console.Clear():** Adicionou-se um comando `Console.Clear()` para limpar a tela após cada escolha do usuário, proporcionando uma experiência mais limpa.
+- **Console.Title:** Definiu-se um título para a janela do console para indicar o propósito do programa.
 
-YouTube:  [youtube.com/channel/UC47RD-s-U6fpKTY0soIUn6g](https://www.youtube.com/channel/UC47RD-s-U6fpKTY0soIUn6g/featured?view_as=subscriber)
+Essas são algumas práticas para melhorar a usabilidade e a estética do seu programa console. Ajuste conforme necessário para atender às suas preferências específicas. Esse foi o resultado:
 
-Twitter:  [@eliezerzarpelao](https://twitter.com/eliezerzarpelao)
+<img src="terminal.png">
 
-Github:  [github.com/elizarp](https://github.com/elizarp)
+___
+
